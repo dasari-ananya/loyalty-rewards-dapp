@@ -1,9 +1,9 @@
 // export const ;
 import { addDecorator } from "@storybook/react";
 import { ThemeProvider } from "@mui/material/styles";
-import { lightTheme } from "../Theme/theme";
+import { theme } from "../Theme/theme";
 
-addDecorator((story) => <ThemeProvider theme={lightTheme}>{story()}</ThemeProvider>);
+addDecorator((story) => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
 
 export const parameters = {
   options: {

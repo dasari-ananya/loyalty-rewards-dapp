@@ -1,7 +1,4 @@
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = (theme) => ({
   connectWalletDialog: {
     '& .MuiPaper-elevation': {
       maxWidth: 800,
@@ -26,16 +23,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   connectWalletFooter: {
     padding: '28px 15px',
     marginTop: 21,
-    backgroundColor: `${theme.palette.textAdvanced.grey2}`,
+    backgroundColor: theme.palette.textAdvanced.grey2,
     '& p': {
       margin: 0,
-      color: `${theme.palette.common.grey1}`,
+      color: theme.palette.common.grey1,
       fontFamily: 'MuliSemiBold',
       fontSize: 13,
       letterSpacing: -0.14,
       lineHeight: '16px',
       textAlign: 'center',
-      '& a': { color: `${theme.palette.alertMsg.pendingBorder}` },
+      '& a': { color: theme.palette.alertMsg.pendingBorder },
     },
   },
   connectWalletDialogConnectBody: {
@@ -50,23 +47,23 @@ const useStyles = makeStyles((theme: Theme) => ({
           width: '100%',
           padding: '60px 24px',
           borderRadius: 6,
-          backgroundColor: `${theme.palette.common.white}`,
+          backgroundColor: theme.palette.common.white,
           boxShadow: '0 1px 3px 0 rgba(0,0,0,0.2)',
           display: 'flex',
           flexDirection: 'column',
           '& div': { padding: 0 },
           '& > h5': {
             padding: '15px 0 8px',
-            color: `${theme.palette.primary.main}`,
+            color: theme.palette.primary.main,
           },
           '& span': {
-            color: `${theme.palette.textAdvanced.dark}`,
+            color: theme.palette.textAdvanced.dark,
             fontFamily: 'MuliRegular',
             fontSize: 14,
             lineHeight: '24px',
           },
           '&:hover': {
-            backgroundColor: `${theme.palette.bgFocus.main}`,
+            backgroundColor: theme.palette.bgFocus.main,
             boxShadow: 'none',
           },
           '@media(max-width: 800px)': { padding: '60px 2%' },
@@ -91,12 +88,12 @@ const useStyles = makeStyles((theme: Theme) => ({
       },
     },
     '& p': {
-      color: `${theme.palette.textAdvanced.dark}`,
+      color: theme.palette.textAdvanced.dark,
       fontFamily: 'MuliSemiBold',
       fontSize: 14,
       lineHeight: '24px',
       textAlign: 'center',
-      '& a': { color: `${theme.palette.alertMsg.pendingBorder}` },
+      '& a': { color: theme.palette.alertMsg.pendingBorder },
     },
   },
   // Account Modal styles
@@ -108,14 +105,14 @@ const useStyles = makeStyles((theme: Theme) => ({
       '& h2': {
         borderBottom: '1px solid #F5F7F8',
         '& h5': {
-          color: `${theme.palette.primary.main}`,
+          color: theme.palette.primary.main,
           fontFamily: 'MuliSemiBold',
         },
         '& button': {
           position: 'absolute',
           right: 8,
           top: 8,
-          color: `${theme.palette.textAdvanced.dark}`,
+          color: theme.palette.textAdvanced.dark,
         },
       },
       '@media(max-width:800px)': { width: '90%' },
@@ -141,7 +138,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   mappedToTxt: {
     marginBottom: 29,
     display: 'inline-block',
-    color: `${theme.palette.textAdvanced.grey3}`,
+    color: theme.palette.textAdvanced.grey3,
     fontFamily: 'MuliRegular',
     fontSize: 16,
     lineHeight: '20px',
@@ -153,7 +150,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& img': { width: 48 },
     '& h4': {
       paddingLeft: 16,
-      color: `${theme.palette.common.black1}`,
+      color: theme.palette.common.black1,
       fontFamily: 'MuliRegular',
       fontWeight: 400,
       letterSpacing: -0.31,
@@ -173,14 +170,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: 16,
         lineHeight: '20px',
         '&:firt-of-type': {
-          color: `${theme.palette.textAdvanced.grey3}`,
+          color: theme.palette.textAdvanced.grey3,
         },
         '&:last-of-type': {
           marginLeft: 11,
           padding: '5px 12px',
           borderRadius: 20,
           backgroundColor: 'rgba(204,180,225,0.1)',
-          color: `${theme.palette.common.black1}`,
+          color: theme.palette.common.black1,
           letteSpacing: -0.09,
         },
       },
@@ -189,7 +186,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   accountNo: {
     marginBottom: 5,
-    color: `${theme.palette.common.black1}`,
+    color: theme.palette.common.black1,
     fontFamily: 'MuliRegular',
     fontSize: 14,
     lineHeight: '24px',
@@ -203,18 +200,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   copyDisconnectBtnContainer: {
     '& button': { padding: '15px 20px 13px 10px' },
   },
-  copyBtn: { color: `${theme.palette.alertMsg.pendingBorder}`},
-  disconnectBtn: { color: `${theme.palette.textAdvanced.red}` },
+  copyBtn: { color: theme.palette.alertMsg.pendingBorder},
+  disconnectBtn: { color: theme.palette.textAdvanced.red },
   cardanoAccDetails: {
     '& p': {
       '&:first-of-type': {
-        color: `${theme.palette.textAdvanced.dark}`,
+        color: theme.palette.textAdvanced.dark,
         fontFamily: 'MuliRegular',
         fontSize: 14,
         lineHeight: '24px',
       },
       '&:last-of-type': {
-        color: `${theme.palette.common.grey1}`,
+        color: theme.palette.common.grey1,
         fontFamily: 'MuliRegular',
         fontSize: 13,
         letterSpacing: -0.14,
@@ -252,7 +249,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       },
       '& span': {
         marginTop: 7,
-        color: `${theme.palette.textAdvanced.dark}`,
+        color: theme.palette.textAdvanced.dark,
         fontFamily: 'MuliRegular',
         fontSize: 14,
         lineHeight: '24px',
@@ -264,16 +261,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   accountModalDialogActions: {
     padding: '32px 20px !important',
     justifyContent: 'center !important',
-    background: `${theme.palette.textAdvanced.grey2}`,
+    background: theme.palette.textAdvanced.grey2,
     '& p': {
-      color: `${theme.palette.common.grey1}`,
+      color: theme.palette.common.grey1,
       fontFamily: 'MuliSemiBold',
       fontSize: 13,
       letterSpacing: -0.14,
       lineHeight: '16px',
-      '& a': { color: `${theme.palette.alertMsg.pendingBorder}` },
+      '& a': { color: theme.palette.alertMsg.pendingBorder },
     },
   },
-}));
+});
 
 export default useStyles;

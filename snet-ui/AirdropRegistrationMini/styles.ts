@@ -1,6 +1,4 @@
-import { Theme } from '@mui/material/styles';
-
-export default (theme: Theme): any => ({
+export default (theme) => ({
   registrationBox: {
     width: 470,
     borderRadius: 8,
@@ -14,7 +12,7 @@ export default (theme: Theme): any => ({
     marginTop: 48,
     textAlign: 'center',
     '& button': {
-      color: `${theme.palette.textAdvanced.secondary}`,
+      color: theme.palette.textAdvanced.secondary,
       backgroundColor: '#4086ff',
       fontFamily: 'MuliSemibold',
       '&:hover': {
@@ -26,7 +24,7 @@ export default (theme: Theme): any => ({
     },
   },
   registrationInfoMsg: {
-    color: `${theme.palette.textAdvanced.secondary}`,
+    color: theme.palette.textAdvanced.secondary,
     fontFamily: 'MuliSemiBold',
     fontSize: 20,
     fontWeight: 600,

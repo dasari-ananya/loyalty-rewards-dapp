@@ -1,6 +1,4 @@
-import { Theme } from '@mui/material/styles';
-
-export default (theme: Theme): any => ({
+export default (theme) => ({
   successMsg: {
     border: `1px solid ${theme.palette.alertMsg.successBorder} !important`,
     backgroundColor: `${theme.palette.alertMsg.successBg} !important`,
@@ -13,10 +11,8 @@ export default (theme: Theme): any => ({
     padding: '12px 24px',
     borderRadius: 4,
     width: '620px',
-    // alignItems: 'center',
-    // justifyContent: 'flex-start !important',
     border: `1px solid ${theme.palette.alertMsg.errorBorder}`,
-    backgroundColor: `${theme.palette.alertMsg.errorBg}`,
+    backgroundColor: theme.palette.alertMsg.errorBg,
     '& svg': { fontSize: 20 },
     '& div': { padding: 0 },
     '& p': {

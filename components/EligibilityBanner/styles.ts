@@ -1,12 +1,11 @@
-import { Theme } from '@mui/material/styles';
-import listOfAirDropStatusType from './constants';
+import listOfAirDropStatusType from "./constants";
 
-export default (theme: Theme): any => ({
+export default (theme) => ({
   eligibilityBannerContainer: {
     padding: '16px 38px 23px',
     borderRadius: 8,
     margin: '160px 0 8px',
-    backgroundColor: `${theme.palette.bgHighlight.main}`,
+    backgroundColor: theme.palette.bgHighlight.main,
     '@media(max-width:900px)': {
       width: '83%',
       margin: '160px auto 8px',
@@ -19,18 +18,18 @@ export default (theme: Theme): any => ({
     display: 'flex',
     '& span': {
       marginRight: 12,
-      color: `${theme.palette.textAdvanced.dark}`,
+      color: theme.palette.textAdvanced.dark,
       fontFamily: 'MuliRegular',
     },
     '& h5': { fontFamily: 'MuliSemiBold' },
     [`& h5[data-airdrop-status-type="${listOfAirDropStatusType.WALLET_ACCOUNT_ERROR}"]`]: {
-      color: `${theme.palette.error.main}`,
+      color: theme.palette.error.main,
     },
     [`& h5[data-airdrop-status-type="${listOfAirDropStatusType.REGISTRATION_CLOSED}"]`]: {
-      color: `${theme.palette.common.grey}`,
+      color: theme.palette.common.grey,
     },
     [`& h5[data-airdrop-status-type="${listOfAirDropStatusType.ELIGIBLE_TO_MAP_CARDANO_WALLET}"],& h5[data-airdrop-status-type="${listOfAirDropStatusType.REGISTRATION_OPEN}"],& h5[data-airdrop-status-type="${listOfAirDropStatusType.CLAIM_OPEN}"]`]: {
-      color: `${theme.palette.alertMsg.successGreen}`,
+      color: theme.palette.alertMsg.successGreen,
     },
   },
   walletDetailsContainer: {
@@ -40,7 +39,7 @@ export default (theme: Theme): any => ({
     '& div': {
       '& > img': { objectFit: 'contain' },
       marginLeft: 12,
-      color: `${theme.palette.textAdvanced.dark}`,
+      color: theme.palette.textAdvanced.dark,
       '& span': {
         marginBottom: 5,
         display: 'inline-block',
@@ -52,7 +51,7 @@ export default (theme: Theme): any => ({
         fontFamily: 'MuliRegular',
         '& svg': {
           marginLeft: 10,
-          color: `${theme.palette.alertMsg.pendingBorder}`,
+          color: theme.palette.alertMsg.pendingBorder,
           fontSize: 15,
           cursor: 'pointer',
           verticalAlign: 'middle',

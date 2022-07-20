@@ -1,7 +1,4 @@
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-
-const airdropRegistrationStyles = makeStyles((Theme) => ({
+const airdropRegistrationStyles = (theme) => ({
   airdropClaimStartDateTime: {
     margin: 0,
     '& h4': { fontFamily: 'MuliSemiBold' },
@@ -24,8 +21,8 @@ const airdropRegistrationStyles = makeStyles((Theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '70%',
-    borderColor: Theme.palette.text.secondary,
+    borderColor: theme.palette.text.secondary,
   },
-}));
+});
 
 export default airdropRegistrationStyles;

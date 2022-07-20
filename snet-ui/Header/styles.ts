@@ -1,7 +1,4 @@
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-
-const headerStyles = makeStyles((theme: Theme) => ({
+const headerStyles = (theme) => ({
   header: {
     background: `${theme.palette.background.default} !important`,
     boxShadow: '0 2px 3px 0 rgba(0,0,0,0.1)',
@@ -34,7 +31,7 @@ const headerStyles = makeStyles((theme: Theme) => ({
     '& a': { lineHeight: 0 },
     '& span': {
       marginLeft: 8,
-      color: `${theme.palette.common.black1}`,
+      color: theme.palette.common.black1,
       fontSize: 22,
       fontFamily: 'MuliRegular',
       fontWeight: 300,
@@ -55,7 +52,7 @@ const headerStyles = makeStyles((theme: Theme) => ({
       border: '1px solid #CCCCCC',
       borderRadius: '50%',
       backgroundColor: '#9B9B9B',
-      color: `${theme.palette.common.white}`,
+      color: theme.palette.common.white,
       fontSize: '20px',
     },
     '& div': {
@@ -70,7 +67,7 @@ const headerStyles = makeStyles((theme: Theme) => ({
       },
       '& p': {
         margin: 0,
-        color: `${theme.palette.alertMsg.pendingBorder}`,
+        color: theme.palette.alertMsg.pendingBorder,
         fontFamily: 'MuliSemiBold',
         fontSize: 11,
         lineHeight: '14px',
@@ -180,12 +177,12 @@ const headerStyles = makeStyles((theme: Theme) => ({
             boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
-            color: `${theme.palette.common.grey1}`,
+            color: theme.palette.common.grey1,
             fontFamily: 'MuliSemiBold',
             fontSize: 16,
             lineHeight: '20px',
             textDecoration: 'none',
-            '&:hover': { color: `${theme.palette.alertMsg.pendingBorder}` },
+            '&:hover': { color: theme.palette.alertMsg.pendingBorder },
           },
           '&:first-of-type': { paddingLeft: 0 },
         },
@@ -263,6 +260,6 @@ const headerStyles = makeStyles((theme: Theme) => ({
       lineHeight: '16px',
     },
   },
-}));
+});
 
 export default headerStyles;

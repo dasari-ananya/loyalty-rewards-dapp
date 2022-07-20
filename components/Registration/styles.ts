@@ -1,7 +1,6 @@
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
+import { ImportantDevices } from "@mui/icons-material";
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = (theme) => ({
   registrationMainContainer: {
     maxWidth: '1160px',
     padding: 0,
@@ -29,19 +28,19 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: '0 83px 0 86px',
       '@media(max-width: 640px)': { padding: '0 10%' },
       '& h2': {
-        color: `${theme.palette.alertMsg.pendingBorder}`,
+        color: theme.palette.alertMsg.pendingBorder,
         fontFamily: 'MuliBold',
         textAlign: 'center',
       },
       '& h4': {
         padding: '30px 0',
-        color: `${theme.palette.text.secondary}`,
+        color: theme.palette.text.secondary,
         fontFamily: 'MuliSemiBold',
         textAlign: 'center',
       },
       '& > div': {
         '& p': {
-          color: `${theme.palette.text.secondary}`,
+          color: theme.palette.text.secondary,
           fontFamily: 'MontserratRegular',
           fontSize: 14,
           lineHeight: '24px',
@@ -59,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         display: 'flex',
         borderRadius: 3,
         backgroundColor: `${theme.palette.alertMsg.pendingBorder} !important`,
-        color: `${theme.palette.text.secondary}`,
+        color: theme.palette.text.secondary,
         fontFamily: 'MuliSemiBold',
         fontSize: 14,
         lineHeight: '24px',
@@ -77,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    background: `${theme.palette.background.paper}`,
+    background: theme.palette.background.paper,
     boxShadow: '0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2)',
     alignItems: 'center',
     justifyContent: 'center',
@@ -85,7 +84,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
     '& img': { width: '100%' },
     '& p': {
-      color: `${theme.palette.common.black1}`,
+      color: theme.palette.common.black1,
       fontFamily: 'MuliRegular',
       fontSize: 14,
       lineHeight: '24px',
@@ -96,6 +95,6 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: '0 20px 80px',
     },
   },
-}));
+});
 
 export default useStyles;

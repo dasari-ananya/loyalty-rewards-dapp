@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import { AIRDROP_TITLE_STRING } from 'utils/airdropWindows';
-import { lightTheme } from 'snet-ui/Theme/theme';
+import { theme } from 'snet-ui/Theme/theme';
 import createEmotionCache from 'snet-ui/Theme/createEmotionCache';
 import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
@@ -78,7 +78,7 @@ function MyApp(props: AppProps) {
         <title>{AIRDROP_TITLE_STRING}</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <BlockChainProvider>

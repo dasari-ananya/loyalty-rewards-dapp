@@ -1,11 +1,8 @@
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-
-const footerStyles = makeStyles((theme: Theme) => ({
+const footerStyles = (theme) => ({
   footerMainContainer: {
     maxWidth: '100%',
     paddingTop: 49,
-    background: `${theme.palette.background.purple}`,
+    background: theme.palette.background.purple,
   },
   footerWrapper: {
     width: 1160,
@@ -60,8 +57,8 @@ const footerStyles = makeStyles((theme: Theme) => ({
           boxSizing: 'content-box',
           padding: 7,
           borderRadius: '50%',
-          backgroundColor: `${theme.palette.alertMsg.pendingBorder}`,
-          color: `${theme.palette.common.white}`,
+          backgroundColor: theme.palette.alertMsg.pendingBorder,
+          color: theme.palette.common.white,
           fontSize: 19,
           '&:hover': { backgroundColor: '#7F1BA4' },
         },
@@ -88,8 +85,8 @@ const footerStyles = makeStyles((theme: Theme) => ({
         height: 48,
         border: '2px solid #D9D9D9',
         borderRadius: 3,
-        backgroundColor: `${theme.palette.common.white}`,
-        color: `${theme.palette.textAdvanced.dark}`,
+        backgroundColor: theme.palette.common.white,
+        color: theme.palette.textAdvanced.dark,
         fontFamily: 'MuliSemiBold',
         fontSize: 14,
         lineHeight: '24px',
@@ -100,9 +97,9 @@ const footerStyles = makeStyles((theme: Theme) => ({
       padding: '16px 26px',
       borderRadius: 3,
       marginLeft: 16,
-      backgroundColor: `${theme.palette.alertMsg.pendingBorder}`,
+      backgroundColor: theme.palette.alertMsg.pendingBorder,
       boxShadow: '0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2)',
-      color: `${theme.palette.common.white}`,
+      color: theme.palette.common.white,
       fontFamily: 'MuliBold',
       fontSize: 14,
       lineHeight: '16px',
@@ -129,7 +126,7 @@ const footerStyles = makeStyles((theme: Theme) => ({
     '& > span': {
       marginBottom: 24,
       display: 'block',
-      color: `${theme.palette.textAdvanced.grey2}`,
+      color: theme.palette.textAdvanced.grey2,
       fontFamily: 'MuliBold',
       fontSize: 18,
       lineHeight: '24px',
@@ -168,7 +165,7 @@ const footerStyles = makeStyles((theme: Theme) => ({
       },
     },
     '& span': {
-      color: `${theme.palette.text.secondary}`,
+      color: theme.palette.text.secondary,
       fontFamily: 'MuliSemiBold',
       fontSize: 16,
       lineHeight: '32px',
@@ -176,7 +173,7 @@ const footerStyles = makeStyles((theme: Theme) => ({
     },
     '& p': {
       margin: 0,
-      color: `${theme.palette.text.secondary}`,
+      color: theme.palette.text.secondary,
       fontFamily: 'MuliSemiBold',
       fontSize: 16,
       lineHeight: '32px',
@@ -184,6 +181,6 @@ const footerStyles = makeStyles((theme: Theme) => ({
     },
     '& a': { textDecoration: 'underline' },
   },
-}));
+});
 
 export default footerStyles;

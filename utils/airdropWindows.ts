@@ -53,6 +53,7 @@ export const AIRDROP_TITLE_STRING = 'Loyality Rewards Info:';
 export const AIRDROP_DESCRIPTION_STRING =
   'During the first year of Phase Two, 5% of the monthly tranches will be allotted to Phase One AGI (ERC-20) token holders ' +
   'as a reward for loyality and to incentivize participation in the Phase II network.';
+export const AIRDROP_CLAIM_IN_PROGRESS_STRING = 'Your Claim is in progress';
 
 export const AIRDROP_LINKS = {
   WEBSITE: 'https://singularitynet.io/',

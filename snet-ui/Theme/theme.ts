@@ -33,8 +33,9 @@ declare module '@mui/material/styles' {
       successBorder: string;
       successBg: string;
       pendingBorder: string;
-      pandingBg: string;
+      pendingBg: string;
       main: string;
+      successGreen: string;
     };
   }
 }
@@ -73,7 +74,13 @@ declare module '@mui/material/Typography/Typography' {
 
 export const lightTheme = createTheme({
   palette: {
-    common: { black: colors.BLACK, black1: colors.BLACK_1, white: colors.WHITE, grey: colors.GREY, grey1: colors.GREY_1,  },
+    common: {
+      black: colors.BLACK,
+      black1: colors.BLACK_1,
+      white: colors.WHITE,
+      grey: colors.GREY,
+      grey1: colors.GREY_1,
+    },
     primary: { main: colors.DARK_BLUE },
     secondary: { main: colors.LIGHT_TEAL, light: colors.PENDING_BORDER },
     bgHighlight: { main: colors.WHITE_2 },
@@ -105,7 +112,7 @@ export const lightTheme = createTheme({
       successBorder: colors.SUCCESS_BORDER,
       successBg: colors.SUCCESS_BG,
       pendingBorder: colors.PENDING_BORDER,
-      pandingBg: colors.PENDING_BG,
+      pendingBg: colors.PENDING_BG,
       main: colors.ERROR_BORDER,
       successGreen: colors.SUCCESS_GREEN,
     },

@@ -19,6 +19,7 @@ import {
   AIRDROP_LINKS,
   AIRDROP_TOKEN_DIVISOR,
   TRANSACTION_TYPE,
+  AIRDROP_CLAIM_IN_PROGRESS_STRING,
 } from 'utils/airdropWindows';
 import { useEthSign } from 'snet-ui/Blockchain/signatureHooks';
 import { parseEthersError } from 'utils/ethereum';
@@ -224,6 +225,13 @@ const Registration: FunctionComponent<RegistrationProps> = ({
         tempHistory.push(item);
       }
     }, []);
+
+    const claimInProgress = tempHistory.some(
+      (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id && obj.txn_status === ClaimStatus.PENDING
+    );
+    if (claimInProgress) {
+      setUiAlert({ type: AlertTypes.info, message: AIRDROP_CLAIM_IN_PROGRESS_STRING});
+    }
 
     const history = tempHistory.map((el) => {
       const reward =

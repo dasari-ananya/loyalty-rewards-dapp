@@ -230,7 +230,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
       (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id && obj.txn_status === ClaimStatus.PENDING
     );
     if (claimInProgress) {
-      setUiAlert({ type: AlertTypes.info, message: AIRDROP_CLAIM_IN_PROGRESS_STRING});
+      setUiAlert({ type: AlertTypes.info, message: AIRDROP_CLAIM_IN_PROGRESS_STRING });
     }
 
     const history = tempHistory.map((el) => {

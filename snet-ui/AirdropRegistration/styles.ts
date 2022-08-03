@@ -17,6 +17,11 @@ const airdropRegistrationStyles = makeStyles((Theme) => ({
       '&:hover': {
         border: '1px solid #f4f8ff',
       },
+      '@media(max-width: 480px)': { margin: '0 0 10px 0' },
+    },
+    '@media(max-width: 480px)': {
+      display: 'flex',
+      flexDirection: 'column',
     },
   },
   claimedContainer: {
@@ -25,6 +30,26 @@ const airdropRegistrationStyles = makeStyles((Theme) => ({
     alignItems: 'center',
     width: '70%',
     borderColor: Theme.palette.text.secondary,
+    '@media9max-width: 900px)': {
+      width: '100%',
+      margin: '40px 0',
+    },
+  },
+  claimOrMapBtnContainer: {
+    '& button': {
+      '@media(max-width: 600px)': { width: '100%' },
+    },
+  },
+  mappedWalletDateTimeContainer: {
+    backgroundColor: Theme.palette.bgHighlight.main,
+    borderRadius: 2,
+    padding: '15px 16px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    '@media(max-width: 900px)': {
+      maxWidth: '100%',
+      flexBasis: '100%',
+    },
   },
 }));
 

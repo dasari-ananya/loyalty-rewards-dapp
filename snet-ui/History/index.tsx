@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { TRANSACTION_TYPE } from 'utils/airdropWindows';
 import { Link } from '@mui/material';
+import useStyles from './styles';
 
 type HistoryEvent = {
   window: string;
@@ -20,7 +21,7 @@ type HistoryProps = {
 export default function History({ events }: HistoryProps) {
   const CardanoTransaction = process.env.NEXT_PUBLIC_CARDANO_TRANSACTION_DETAIL;
   return (
-    <List sx={{ py: 0.5 }}>
+    <List sx={{ py: 0.5 }} className={classes.claimHistoryTable}>
       {events.map((event) => (
         <ListItem key={event.window} sx={{ mb: '1px', py: 0, px: 0, justifyContent: 'center' }}>
           <Grid container xs={9} sx={{ bgcolor: 'bgHighlight.main', borderRadius: '2px', px: 3, py: 2 }}>

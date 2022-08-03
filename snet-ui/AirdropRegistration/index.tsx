@@ -372,6 +372,7 @@ export default function AirdropRegistration({
                 </Box>
               ) : null}
               <Box
+                className={classes.claimOrMapBtnContainer}
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
@@ -452,18 +453,7 @@ export default function AirdropRegistration({
                     Your Airdrop History
                   </Typography>
                   <Box display={'flex'} justifyContent={'center'} mt={2}>
-                    <Grid
-                      xs={9}
-                      justifyContent="space-between"
-                      sx={{
-                        bgcolor: 'bgHighlight.main',
-                        borderRadius: '2px',
-                        px: 3,
-                        py: 2,
-                        height: 52,
-                        display: 'flex',
-                      }}
-                    >
+                    <Grid className={classes.mappedWalletDateTimeContainer} xs={9}>
                       <Typography color="textAdvanced.dark" fontSize={14} fontWeight={600}>
                         Cardano Wallet Mapped
                       </Typography>

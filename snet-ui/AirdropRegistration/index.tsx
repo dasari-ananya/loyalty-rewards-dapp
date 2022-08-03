@@ -429,16 +429,8 @@ export default function AirdropRegistration({
               </Box>
               {cardanoWalletAddress ? (
                 <Box display="flex" justifyContent="center">
-                  <Box
-                    className={classes.claimedContainer}
-                    px={3}
-                    py={2}
-                    m={5}
-                    border={1}
-                    borderLeft={0}
-                    borderRight={0}
-                  >
-                    <Typography color="text.secondary" fontSize="14px">
+                  <Box className={classes.claimedContainer}>
+                    <Typography fontFamily="MuliRegular" color="text.secondary" fontSize="14px">
                       Airdrop Windows Claimed
                     </Typography>
                     <Typography fontFamily="MuliSemiBold" color="text.secondary" fontSize="24px" fontWeight="600">

@@ -20,11 +20,12 @@ type HistoryProps = {
 };
 export default function History({ events }: HistoryProps) {
   const CardanoTransaction = process.env.NEXT_PUBLIC_CARDANO_TRANSACTION_DETAIL;
+  const classes = useStyles();
   return (
-    <List sx={{ py: 0.5 }} className={classes.claimHistoryTable}>
+    <List className={classes.claimHistoryTable}>
       {events.map((event) => (
-        <ListItem key={event.window} sx={{ mb: '1px', py: 0, px: 0, justifyContent: 'center' }}>
-          <Grid container xs={9} sx={{ bgcolor: 'bgHighlight.main', borderRadius: '2px', px: 3, py: 2 }}>
+        <ListItem key={event.window}>
+          <Grid container xs={9}>
             <Grid item xs={5}>
               <Typography color="primary.main" fontSize={12}>
                 Claim

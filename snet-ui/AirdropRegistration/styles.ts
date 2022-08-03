@@ -4,7 +4,10 @@ import { makeStyles } from '@mui/styles';
 const airdropRegistrationStyles = makeStyles((Theme) => ({
   airdropClaimStartDateTime: {
     margin: 0,
-    '& h4': { fontFamily: 'MuliSemiBold' },
+    '& h4': { 
+      fontFamily: 'MuliSemiBold',
+      '@media(max-width: 480px)': { fontSize: 16 },
+    },
   },
   viewBtnsContainer: {
     marginTop: 24,
@@ -25,15 +28,22 @@ const airdropRegistrationStyles = makeStyles((Theme) => ({
     },
   },
   claimedContainer: {
+    width: '70%',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '70%',
+    padding: '24px 0 16px',
+    margin: 40,
+    border: '1px solid',
+    borderLeft: 0,
+    borderRight: 0,
     borderColor: Theme.palette.text.secondary,
-    '@media9max-width: 900px)': {
+    '@media(max-width: 900px)': {
       width: '100%',
-      margin: '40px 0',
+      padding: '16px 10px',
+      margin: '40px 0 16px',
     },
+    '@media(max-width: 480px)': { flexDirection: 'column' },
   },
   claimOrMapBtnContainer: {
     '& button': {

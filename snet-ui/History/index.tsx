@@ -43,14 +43,8 @@ export default function History({ events }: HistoryProps) {
                   {event.reward}
                 </Typography>
               ) : (
-                <Link
-                  component="a"
-                  href={`${CardanoTransaction}/${event.txn_hash}`}
-                  underline="hover"
-                  target="_blank"
-                  color="Highlight"
-                >
-                  <Typography color="textAdvanced.dark" fontFamily="MuliSemiBold" fontSize={14} lineHeight="24px">
+                <Link component="a" href={`${CardanoTransaction}/${event.txn_hash}`} underline="always" target="_blank">
+                  <Typography fontFamily="MuliSemiBold" fontSize={14} lineHeight="24px">
                     {event.reward}
                   </Typography>
                 </Link>

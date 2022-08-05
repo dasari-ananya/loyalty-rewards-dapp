@@ -78,7 +78,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
   const [registrationId, setRegistrationId] = useState(registrationID);
   const [showRegistrationSuccess, setShowRegistrationSuccess] = useState<boolean>(false);
   const [showClaimSuccess, setShowClaimSuccess] = useState<boolean>(false);
-  const [claimInitiated, setClaimInitiated] = useState<boolean>(false);
+  const [claimInitiated, setClaimInitiated] = useState<boolean>(claimStatus === ClaimStatus.NOT_STARTED ? false : true);
   const [airdropHistory, setAirdropHistory] = useState([]);
   const [claimedWindow, setClaimedWindow] = useState(0);
   const { account, library, chainId } = useActiveWeb3React();
@@ -227,7 +227,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
     }, []);
 
     const claimInProgress = tempHistory.some(
-      (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id && obj.txn_status === ClaimStatus.PENDING
+      (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id && obj.txn_status !== ClaimStatus.SUCCESS
     );
     if (claimInProgress) {
       setUiAlert({ type: AlertTypes.info, message: AIRDROP_CLAIM_IN_PROGRESS_STRING });
@@ -242,7 +242,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
       return {
         window: `Window ${el.airdrop_window_order} Rewards`,
         reward,
-        status: `${el.txn_status}`,
+        status: `${el.txn_status === ClaimStatus.FAIL ? 'PENDING' : el.txn_status}`,
         txn_hash: el.txn_hash,
         action_type: el.action_type,
       };

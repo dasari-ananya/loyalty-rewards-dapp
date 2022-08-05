@@ -242,7 +242,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
       return {
         window: `Window ${el.airdrop_window_order} Rewards`,
         reward,
-        status: `${el.txn_status === ClaimStatus.FAIL ? 'PENDING' : el.txn_status}`,
+        status: `${el.txn_status === ClaimStatus.FAIL ? ClaimStatus.PENDING : el.txn_status}`,
         txn_hash: el.txn_hash,
         action_type: el.action_type,
       };

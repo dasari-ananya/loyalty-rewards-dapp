@@ -78,7 +78,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
   const [registrationId, setRegistrationId] = useState(registrationID);
   const [showRegistrationSuccess, setShowRegistrationSuccess] = useState<boolean>(false);
   const [showClaimSuccess, setShowClaimSuccess] = useState<boolean>(false);
-  const [claimInitiated, setClaimInitiated] = useState<boolean>(claimStatus === ClaimStatus.NOT_STARTED ? false : true);
+  const [claimInitiated, setClaimInitiated] = useState<boolean>();
   const [airdropHistory, setAirdropHistory] = useState([]);
   const [claimedWindow, setClaimedWindow] = useState(0);
   const { account, library, chainId } = useActiveWeb3React();
@@ -91,6 +91,10 @@ const Registration: FunctionComponent<RegistrationProps> = ({
 
   const dispatch = useAppDispatch();
   const classes = useStyles();
+
+  useEffect(() => {
+    setClaimInitiated(claimStatus === ClaimStatus.NOT_STARTED ? false : true);
+  }, [claimStatus]);
 
   useEffect(() => {
     setRegistrationId(registrationID);
@@ -210,8 +214,6 @@ const Registration: FunctionComponent<RegistrationProps> = ({
     const isClaimInitiated = response.data.data.claim_history.some(
       (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id
     );
-    const claimedWindow = response.data.data.claim_history.filter((obj) => obj?.txn_status !== ClaimStatus.PENDING)
-      .length;
 
     const tempHistory: any = [];
     response.data.data.claim_history.forEach((item) => {
@@ -225,6 +227,14 @@ const Registration: FunctionComponent<RegistrationProps> = ({
         tempHistory.push(item);
       }
     }, []);
+
+    const claimedWindow =
+      tempHistory.reduce(function (prev, current) {
+        if (current.txn_status === ClaimStatus.SUCCESS) {
+          return prev.airdrop_window_id > current.airdrop_window_id ? prev : current;
+        }
+        return {};
+      }, {}).airdrop_window_order || 0;
 
     const claimInProgress = tempHistory.some(
       (obj) => obj.airdrop_window_id === activeWindow.airdrop_window_id && obj.txn_status !== ClaimStatus.SUCCESS

@@ -229,7 +229,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
     }, []);
 
     const claimedWindow =
-      tempHistory.reduce(function (prev, current) {
+      tempHistory.reduce((prev, current) => {
         if (current.txn_status === ClaimStatus.SUCCESS) {
           return prev.airdrop_window_id > current.airdrop_window_id ? prev : current;
         }

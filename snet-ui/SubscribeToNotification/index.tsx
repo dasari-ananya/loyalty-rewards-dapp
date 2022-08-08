@@ -105,7 +105,7 @@ function SubscribeToNotification({ onSubscribe }: SubscribeToNotificationProps, 
         {alertMessage.message ? (
           <Box className={classes.alertBoxContainer}>
             <Alert icon={<ErrorOutline />} severity="error">
-              <AlertTitle>alertMessagemessage</AlertTitle>
+              <AlertTitle>{alertMessage.message}</AlertTitle>
             </Alert>
           </Box>
         ) : null}

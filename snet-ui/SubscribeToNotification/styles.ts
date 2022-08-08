@@ -43,6 +43,7 @@ const getUpdateNotificationStyles = makeStyles((theme: Theme) => ({
       backgroundColor: `${theme.palette.error.light}`,
       '& svg': { color: `${theme.palette.error.main}` },
       '& .MuiAlertTitle-root': { fontFamily: 'MuliRegular' },
+      '& .MuiAlert-message': { marginBottom: 0 },
       '@media(max-width: 600px)': { width: '100%' },
     },
   },

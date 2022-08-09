@@ -37,6 +37,7 @@ import airdropRegistrationStyles from './styles';
 import LoaderModal from 'components/Registration/loaderModal';
 import { setStartMapingCardano, setWalletExtensionError } from 'utils/store/features/walletSlice';
 import AccountModal from 'snet-ui/Blockchain/AccountModal';
+import SNETButton from 'snet-ui/SNETButton';
 
 type HistoryEvent = {
   window: string;
@@ -253,14 +254,10 @@ export default function AirdropRegistration({
           </Grid>
           <Grid container spacing={2} sx={{ marginTop: 2 }}>
             <Grid item xs={6}>
-              <Button onClick={toggleStakeModal} color="secondary" variant="contained" fullWidth>
-                Cancel
-              </Button>
+              <SNETButton name="Cancel" onClick={toggleStakeModal} variant="contained" />
             </Grid>
             <Grid item xs={6}>
-              <Button onClick={handleStakeClick} color="secondary" variant="contained" fullWidth>
-                Stake
-              </Button>
+              <SNETButton name="Stake" onClick={handleStakeClick} variant="contained" />
             </Grid>
           </Grid>
 
@@ -398,10 +395,6 @@ export default function AirdropRegistration({
                     sx={{
                       width: 366,
                       textTransform: 'capitalize',
-                      fontWeight: 600,
-                      height: 40,
-                      fontSize: 14,
-                      fontFamily: 'MuliSemiBold',
                     }}
                     onClick={handleClaimClick}
                     disabled={isClaimInitiated}
@@ -414,9 +407,7 @@ export default function AirdropRegistration({
                     color="secondary"
                     sx={{
                       textTransform: 'capitalize',
-                      fontFamily: 'MuliSemiBold',
                       width: 366,
-                      fontWeight: 600,
                     }}
                     onClick={toggleWalletConnectModal}
                     disabled={userEligibility === UserEligibility.NOT_ELIGIBLE}
@@ -426,16 +417,8 @@ export default function AirdropRegistration({
                 )}
               </Box>
               <Box className={classes.viewBtnsContainer}>
-                <Button variant="outlined" onClick={onViewSchedule}>
-                  <Typography color="text.secondary" fontSize="14px" fontWeight="600">
-                    View Schedule
-                  </Typography>
-                </Button>
-                <Button variant="outlined" onClick={onViewRules}>
-                  <Typography color="text.secondary" fontSize="14px" fontWeight="600">
-                    View Rules
-                  </Typography>
-                </Button>
+                <SNETButton name="View Schedule" onClick={onViewSchedule} variant="outlined" />
+                <SNETButton name="View Rules" onClick={onViewRules} variant="outlined" />
               </Box>
               {cardanoWalletAddress ? (
                 <Box display="flex" justifyContent="center">

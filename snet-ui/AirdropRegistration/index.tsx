@@ -26,7 +26,7 @@ import Grid from '@mui/material/Grid';
 import { checkDateIsBetween, getDateInStandardFormat } from 'utils/date';
 import Container from '@mui/material/Container';
 import moment from 'moment';
-import { cardanoSupportingWallets } from 'utils/constants/cardanoWallet';
+import { cardanoSupportingWallets, cardanoWalletExtensionError } from 'utils/constants/cardanoWallet';
 import useInjectableWalletHook from '../../libraries/useInjectableWalletHook';
 import { useAppDispatch, useAppSelector } from 'utils/store/hooks';
 import { AirdropStatusMessage, UserEligibility } from 'utils/constants/CustomTypes';
@@ -35,7 +35,7 @@ import { AlertTypes } from 'utils/constants/alert';
 import SnetAlert from '../../components/snet-alert';
 import airdropRegistrationStyles from './styles';
 import LoaderModal from 'components/Registration/loaderModal';
-import { setStartMapingCardano } from 'utils/store/features/walletSlice';
+import { setStartMapingCardano, setWalletExtensionError } from 'utils/store/features/walletSlice';
 import AccountModal from 'snet-ui/Blockchain/AccountModal';
 
 type HistoryEvent = {
@@ -120,7 +120,9 @@ export default function AirdropRegistration({
 
   const formattedDate = useMemo(() => getDateInStandardFormat(endDate), [endDate]);
   const { connectWallet, getChangeAddress } = useInjectableWalletHook(cardanoSupportingWallets);
-  const { cardanoWalletAddress, startMappingCardano, cardanoMapedDate } = useAppSelector((state) => state.wallet);
+  const { cardanoWalletAddress, startMappingCardano, cardanoMapedDate, cardanoWalletName } = useAppSelector(
+    (state) => state.wallet
+  );
 
   const dispatch = useAppDispatch();
   const classes = airdropRegistrationStyles();
@@ -167,16 +169,24 @@ export default function AirdropRegistration({
   const handleMapCardanoWallet = async () => {
     startLoader(LOADER_MESSAGE.MAP_CARDANO_WALLET_PROGRESS);
     try {
-      await connectWallet('nami');
+      await connectWallet(cardanoWalletName);
       const cardanoAddress = await getChangeAddress();
       await onRegister(cardanoAddress);
     } catch (error) {
-      console.error('Error connectCardanoWallet=====:', error);
-      setUiAlert({
-        type: AlertTypes.error,
-        message: error?.message || error?.info,
-      });
-      dispatch(setAirdropStatus(AirdropStatusMessage.WALLET_ACCOUNT_ERROR));
+      if (error?.message === cardanoWalletExtensionError) {
+        dispatch(
+          setWalletExtensionError({
+            title: 'Cardano browser extension not detected',
+            message: `Please Install ${cardanoWalletName}`,
+          })
+        );
+      } else {
+        setUiAlert({
+          type: AlertTypes.error,
+          message: error?.message || error?.info,
+        });
+        dispatch(setAirdropStatus(AirdropStatusMessage.WALLET_ACCOUNT_ERROR));
+      }
     } finally {
       stopLoader();
     }

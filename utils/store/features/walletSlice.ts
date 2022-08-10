@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type walletExtentionError = {
   title: string;
-  message: string;
+  walletName: string;
+  link: string;
 };
 export type WalletState = {
   showConnectionModal: boolean;

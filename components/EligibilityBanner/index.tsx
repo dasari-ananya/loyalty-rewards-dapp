@@ -71,6 +71,7 @@ export default function EligibilityBanner({
                 {addEllipsisInBetweenString(account)}
                 <ContentCopyIcon />
               </Typography>
+              <span>Copied!</span>
             </Button>
             <Typography variant="h5">Ethereum {network?.toLowerCase()}</Typography>
           </div>

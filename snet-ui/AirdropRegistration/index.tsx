@@ -26,7 +26,7 @@ import Grid from '@mui/material/Grid';
 import { checkDateIsBetween, getDateInStandardFormat } from 'utils/date';
 import Container from '@mui/material/Container';
 import moment from 'moment';
-import { cardanoSupportingWallets, cardanoWalletExtensionError } from 'utils/constants/cardanoWallet';
+import { cardanoSupportingWallets, cardanoWalletExtensionError, walletExtensions } from 'utils/constants/cardanoWallet';
 import useInjectableWalletHook from '../../libraries/useInjectableWalletHook';
 import { useAppDispatch, useAppSelector } from 'utils/store/hooks';
 import { AirdropStatusMessage, UserEligibility } from 'utils/constants/CustomTypes';
@@ -178,7 +178,8 @@ export default function AirdropRegistration({
         dispatch(
           setWalletExtensionError({
             title: 'Cardano browser extension not detected',
-            message: `Please Install ${cardanoWalletName}`,
+            walletName: cardanoWalletName,
+            link: walletExtensions[cardanoWalletName],
           })
         );
       } else {

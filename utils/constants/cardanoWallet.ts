@@ -28,3 +28,10 @@ export const supportedCardanoWallets = [
 ];
 
 export const cardanoWalletExtensionError = 'WALLET_EXTENSION_NOT_FOUND';
+export const walletExtensions = {
+  Matamask: 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn',
+  Nami: 'https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo',
+  Flint: 'https://chrome.google.com/webstore/detail/flint-wallet/hnhobjmcibchnmglfbldbfabcgaknlkj',
+  CWallet: 'https://chrome.google.com/webstore/detail/cwallet/apnehcjmnengpnmccpaibjmhhoadaico',
+  'Gero Wallet': 'https://chrome.google.com/webstore/detail/gerowallet-testnet/iifeegfcfhlhhnilhfoeihllenamcfgc',
+};

@@ -34,7 +34,7 @@ const RegistrationSuccessModal = ({ showModal, registrationId, onCloseModal }: R
       <GradientBox className={classes.successGradientBox}>
         <img src="/images/Congratulations.svg" alt="SingularityNET" />
         <Box>
-          <Typography variant="h2">Congratulations</Typography>
+          <Typography variant="h2">Congratulationssssssssssssss</Typography>
           <Typography variant="h4">{SUCCESSFUL_REGISTRATION_STRING}</Typography>
           <Box display="flex" justifyContent="center">
             <Button onClick={copyIdToCipboard}>

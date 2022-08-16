@@ -19,6 +19,7 @@ import useStyles from './styles';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
 import { useAppDispatch } from 'utils/store/hooks';
 import { setWalletExtensionError } from 'utils/store/features/walletSlice';
+import { walletExtensions } from 'utils/constants/cardanoWallet';
 
 const style: SxProps<Theme> = {
   position: 'absolute',
@@ -85,7 +86,8 @@ export default function WalletModal({ open, setOpen }: Props) {
             dispatch(
               setWalletExtensionError({
                 title: 'Ethereum browser extension not detected',
-                message: `Please Install MataMask`,
+                walletName: 'MataMask',
+                link: walletExtensions.Matamask,
               })
             );
           } else {

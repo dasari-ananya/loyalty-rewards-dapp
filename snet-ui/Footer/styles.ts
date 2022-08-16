@@ -161,6 +161,7 @@ const footerStyles = makeStyles((theme: Theme) => ({
       letterSpacing: -0.07,
       lineHeight: '14px',
       '&:last-of-type span': { marginBottom: 0 },
+      '&:hover': { color: '#4086ff' },
     },
   },
   secondaryFooter: {
@@ -191,7 +192,11 @@ const footerStyles = makeStyles((theme: Theme) => ({
       lineHeight: '32px',
       opacity: '50%',
     },
-    '& a': { textDecoration: 'underline' },
+    '& a': {
+      color: `${theme.palette.text.secondary}`,
+      textDecoration: 'underline',
+      '&:hover': { color: '#4086ff' },
+    },
   },
 }));
 

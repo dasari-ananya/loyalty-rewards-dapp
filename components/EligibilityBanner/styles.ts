@@ -53,6 +53,16 @@ export default (theme: Theme): any => ({
         '@media(max-width: 1240px)': { display: 'block' },
       },
       '& button': {
+        position: 'relative',
+        '& span': {
+          position: 'absolute',
+          top: -15,
+          right: -15,
+          color: theme.palette.alertMsg.pendingBorder,
+          fontFamily: 'MuliRegular',
+          fontSize: 11,
+          textTransform: 'Capitalize',
+        },
         '@media(max-width: 1240px)': { padding: 0 },
       },
       '& p': {

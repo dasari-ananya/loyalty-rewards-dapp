@@ -89,7 +89,7 @@ function Footer({ handleScrollToLink }: FooterProps) {
                   <Button onClick={onJoinClick}>join</Button>
                   <Snackbar open={openSnackBar} autoHideDuration={1000} onClose={handleCloseSnackBar}>
                     <Alert onClose={handleCloseSnackBar} severity="success" sx={{ width: '100%' }}>
-                      You have successfully subscribe to the newsletter!
+                      You’ve successfully subscribed to our newsletter.
                     </Alert>
                   </Snackbar>
                 </Box>

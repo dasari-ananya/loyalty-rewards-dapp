@@ -36,13 +36,6 @@ export default function EligibilityBanner({
   const network = useMemo(() => SupportedChainId[chainId ?? ''], [chainId]);
   const classes = useStyles();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowEtherumAddressCopied(false);
-      setShowCardanoAddressCopied(false);
-    }, 3000);
-  }, []);
-
   if (!account) return null;
 
   if (userEligibility === UserEligibility.PENDING) {
@@ -88,7 +81,7 @@ export default function EligibilityBanner({
                 {addEllipsisInBetweenString(account)}
                 <ContentCopyIcon />
               </Typography>
-              {etherumAddressCopied ? <span>Copied!</span> : null}
+              {etherumAddressCopied ? <span className={classes.copiedText}>Copied!</span> : null}
             </Button>
             <Typography variant="h5">Ethereum {network?.toLowerCase()}</Typography>
           </div>
@@ -104,7 +97,7 @@ export default function EligibilityBanner({
                     {addEllipsisInBetweenString(cardanoWalletAddress)}
                     <ContentCopyIcon />
                   </Typography>
-                  {cardanoAddressCopied ? <span>Copied!</span> : null}
+                  {cardanoAddressCopied ? <span className={classes.copiedText}>Copied!</span> : null}
                 </Button>
                 <Typography variant="h5">Cardano {network?.toLowerCase()}</Typography>
               </>

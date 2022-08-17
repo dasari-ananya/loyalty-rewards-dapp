@@ -87,7 +87,7 @@ function Footer({ handleScrollToLink }: FooterProps) {
                 <Box>
                   <TextField value={email} placeholder="johndoe@gmail.com" onChange={handleEmailChange} fullWidth />
                   <Button onClick={onJoinClick}>join</Button>
-                  <Snackbar open={openSnackBar} autoHideDuration={1000} onClose={handleCloseSnackBar}>
+                  <Snackbar open={openSnackBar} autoHideDuration={2000} onClose={handleCloseSnackBar}>
                     <Alert onClose={handleCloseSnackBar} severity="success" sx={{ width: '100%' }}>
                       You’ve successfully subscribed to our newsletter.
                     </Alert>

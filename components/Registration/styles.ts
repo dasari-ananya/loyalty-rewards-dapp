@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: '0 83px 0 86px',
       '@media(max-width: 640px)': { padding: '0 10%' },
       '& h2': {
-        color: `${theme.palette.common.white}`,
+        color: `${theme.palette.alertMsg.pendingBorder}`,
         fontFamily: 'MuliBold',
         textAlign: 'center',
       },
@@ -42,21 +42,12 @@ const useStyles = makeStyles((theme: Theme) => ({
         textAlign: 'center',
       },
       '& > div': {
-        alignItems: 'center',
-        position: 'relative',
-        '& > span': {
-          color: `${theme.palette.text.secondary}`,
-          fontFamily: 'MontserratRegular',
-          fontSize: 14,
-          lineHeight: '24px',
-        },
         '& p': {
           color: `${theme.palette.text.secondary}`,
           fontFamily: 'MontserratRegular',
           fontSize: 14,
           lineHeight: '24px',
           wordBreak: 'break-word',
-          textTransform: 'initial',
         },
         '& svg': {
           marginLeft: 13,
@@ -67,23 +58,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     '@media(max-width: 800px)': { width: '90%' },
   },
-  copiedText: {
-    borderRadius: 5,
-    padding: '3px 5px',
-    position: 'absolute',
-    top: -30,
-    right: -15,
-    color: theme.palette.common.white,
-    backgroundColor: theme.palette.common.grey,
-    fontSize: '11px !important',
-    textTransform: 'Capitalize',
-    '@media(max-width:560px)': { top: 0 },
-  },
   // Loader Modal
   loaderModal: {
     width: 410,
     height: 252,
-    paddingBottom: 80,
     borderRadius: 4,
     position: 'absolute',
     top: '50%',
@@ -95,8 +73,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'column',
-    '& img': { width: '100%' },
+    '& img': { 
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: '-50px',
+    },
     '& p': {
+      position: 'absolute',
+      bottom: '50px',
       color: `${theme.palette.common.black1}`,
       fontFamily: 'MuliRegular',
       fontSize: 14,
@@ -110,7 +95,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   awesomeBtn: {
     padding: '8px 65px !important',
-    margin: '40px auto 0',
+    margin: '40px auto 80px',
     display: 'flex',
     borderRadius: 3,
     backgroundColor: `${theme.palette.alertMsg.pendingBorder} !important`,

@@ -115,8 +115,8 @@ export default function AirdropRegistration({
   const [stakeModal, setStakeModal] = useState(false);
   const [showWalletConnectModal, setShowConnectionModal] = useState(false);
   const [loader, setLoader] = useState({
-    loading: true,
-    message: "some message",
+    loading: false,
+    message: null,
   });
 
   const formattedDate = useMemo(() => getDateInStandardFormat(endDate), [endDate]);

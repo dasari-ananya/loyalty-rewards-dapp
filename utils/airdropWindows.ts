@@ -148,7 +148,7 @@ export const windowStatusLabelMap = {
 };
 
 export const LOADER_MESSAGE = {
-  MAP_CARDANO_WALLET_PROGRESS: 'Mapping to your Cardano wallet Nami in progress',
+  MAP_CARDANO_WALLET_PROGRESS: 'Mapping to your Cardano wallet {wallet} in progress',
   CLAIM_PROGRESS: 'Claim in progress',
 };
 

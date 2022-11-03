@@ -168,7 +168,7 @@ export default function AirdropRegistration({
   };
 
   const handleMapCardanoWallet = async () => {
-    startLoader(LOADER_MESSAGE.MAP_CARDANO_WALLET_PROGRESS);
+    startLoader(LOADER_MESSAGE.MAP_CARDANO_WALLET_PROGRESS.replace('{wallet}', cardanoWalletName));
     try {
       await connectWallet(cardanoWalletName);
       const cardanoAddress = await getChangeAddress();

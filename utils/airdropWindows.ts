@@ -51,7 +51,7 @@ export const AIRDROP_CHECK_RULES_SCHEDULE = 'Please check the rules and schedule
 export const AIRDROP_HOW_IT_WORKS_STRING = 'How Loyality Rewards Works';
 export const AIRDROP_TITLE_STRING = 'Loyality Rewards Info:';
 export const AIRDROP_DESCRIPTION_STRING =
-  'During the first year of Phase Two, this 5% of the monthly tranches will be allotted to Phase One AGI (ERC-20) token holders as a reward for loyalty and to incentivize participation in the Phase II network. The specifics of this distribution are currently being worked out together with legal counsel as there are subtleties regarding “airdrops” and similar mechanisms in various jurisdictions. The utilization of the Loyalty Reward token pool after the first year may be changed via democratic vote of token-holders';
+  'During the first year of Phase Two, this 5% of the monthly tranches will be allotted to Phase One AGI (ERC-20) token holders as a reward for loyalty and to incentivize participation in the Phase II network. The specifics of this distribution are currently being worked out together with legal counsel as there are subtleties regarding “airdrops” and similar mechanisms in various jurisdictions. The utilization of the Loyalty Reward token pool after the first year may be changed via democratic vote of token-holders.';
 export const AIRDROP_CLAIM_IN_PROGRESS_STRING = 'Your Claim is in progress';
 
 export const AIRDROP_LINKS = {
@@ -75,7 +75,7 @@ export const AIRDROP_RULES = [
   {
     title: 'Registration Requirements',
     description:
-      'None. If your address has received AGIX during the hardfork, it will be eligible to claim loyalty rewards. Users can claim each allocation once it becomes available, or claim all released allocations in one transaction',
+      'None. If your address has received AGIX during the hardfork, it will be eligible to claim loyalty rewards. Users can claim each allocation once it becomes available, or claim all released allocations in one transaction.',
   },
   {
     title: 'KYC requirements',
@@ -84,7 +84,7 @@ export const AIRDROP_RULES = [
   {
     title: 'Claiming End Date',
     description:
-      'Phase 1 holders have 3 years to claim their year 1 loyalty rewards, up until November 22nd 2025, 11am UTC',
+      'Phase 1 holders have 3 years to claim their year 1 loyalty rewards, up until November 22nd 2025, 11am UTC.',
   },
   {
     title: 'Cardano Claiming Special Instructions',
@@ -97,11 +97,11 @@ export const HOW_IT_WORKS = [
   {
     title: 'Eligibility',
     description:
-      'Snapshot: May 28th, 2021, at 08:00:20 AM UTC+0 (Hardfork snapshot of AGI holders). Eligibility restricted to Private wallets only - Token balances which were held on Binance/Kucoin or other centralized exchanges or smart contracts during the hardfork are not eligible. Minimum AGI required for eligibility: 10 AGI',
+      'Snapshot: May 28th, 2021, at 08:00:20 AM UTC+0 (Hardfork snapshot of AGI holders). Eligibility restricted to Private wallets only - Token balances which were held on Binance/Kucoin or other centralized exchanges or smart contracts during the hardfork are not eligible. Minimum AGI required for eligibility: 10 AGI.',
   },
   {
     title: 'Allocation',
-    description: 'Rewards are proportional to token balance during the snapshot, +20% bonus for stakers. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards',
+    description: 'Rewards are proportional to token balance during the snapshot, +20% bonus for stakers. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards.',
   },
   {
     title: 'Total Year 1 tokens to Distribute',
@@ -111,7 +111,7 @@ export const HOW_IT_WORKS = [
   {
     title: 'Distribution periods',
     description:
-      'There will be six monthly allocations, starting November 22nd, 2022 and running to March 21st, 2023',
+      'There will be six monthly allocations, starting November 22nd, 2022 and running to March 21st, 2023.',
   },
 ];
 

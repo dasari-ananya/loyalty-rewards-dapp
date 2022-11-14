@@ -93,7 +93,7 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
               <Box className={classes.connectedWalletDetails}>
                 <Box>
                   <span variant="body1">Type</span>
-                  <span>Etherum</span>
+                  <span>Ethereum</span>
                 </Box>
                 <Box>
                   <span>Network:</span>

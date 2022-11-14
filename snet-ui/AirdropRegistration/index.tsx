@@ -437,7 +437,7 @@ export default function AirdropRegistration({
                 <Box display="flex" justifyContent="center">
                   <Box className={classes.claimedContainer}>
                     <Typography fontFamily="MuliRegular" color="text.secondary" fontSize="14px">
-                      Airdrop Windows Claimed
+                      Loyalty Rewards Windows Claimed
                     </Typography>
                     <Typography fontFamily="MuliSemiBold" color="text.secondary" fontSize="24px" fontWeight="600">
                       {`${claimedWindow} / ${totalWindows}`}

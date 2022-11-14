@@ -50,7 +50,7 @@ const Header = ({ onConnectWallet, onDisconnect, account }: HeaderProps) => {
           <a href="/" className={classes.logoAnchor}>
             <img src="/AppLogo.svg" alt="SingularityNET" />
           </a>
-          <span>Loyality Rewards</span>
+          <span>Loyalty Rewards</span>
         </div>
         {isMobile ? (
           <DrawerComponent

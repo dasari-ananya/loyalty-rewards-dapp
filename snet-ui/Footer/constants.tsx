@@ -1,6 +1,6 @@
 const PrimaryFooterMainLinks = [
   {
-    title: 'Loyality Rewards',
+    title: 'Loyalty Rewards',
     children: [
       { label: 'Foundation Site', link: '#', internalLink: false },
       { label: 'Contact Us', link: '/contactus', internalLink: true },
@@ -15,7 +15,7 @@ const PrimaryFooterMainLinks = [
       { label: 'A.I Publisher', link: 'https://publisher.singularitynet.io/', internalLink: false },
       { label: 'AGIX Staking', link: 'https://staking.singularitynet.io/', internalLink: false },
       { label: 'Bridge', link: '#', internalLink: false },
-      { label: 'Loyality Rewards', link: '#', internalLink: false },
+      { label: 'Loyalty Rewards', link: '#', internalLink: false },
       { label: 'AI - DSL', link: '#', internalLink: false },
       { label: 'Opencog Hyperon', link: '#', internalLink: false },
     ],

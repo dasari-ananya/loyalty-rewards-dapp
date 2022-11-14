@@ -31,25 +31,25 @@ export enum WindowStatus {
   LAST_CLAIM = 'LAST_CLAIM',
 }
 
-export const AIRDROP_RULE_STRING = 'Loyality Rewards Rules';
+export const AIRDROP_RULE_STRING = 'Loyalty Rewards Rules';
 export const AIRDROP_TOKEN_DIVISOR = 100000000;
 export const AIRDROP_TOKEN_SYMBOL = 'AGIX';
 export const AIRDROP_SITE_STRING = 'SingularityNet';
 export const AIRDROP_PENDING_CLAIM_STRING = 'There is already a pending claim. Please wait for it to complete';
 export const AIRDROP_WINDOW_STRING = 'Airdrop Window';
 export const AIRDROP_SCHEDULE_STRING = 'Airdrop Schedule';
-export const AIRDROP_SUPPORT_QUERY_STRING = 'Loyality Airdrop Support Enquiry';
+export const AIRDROP_SUPPORT_QUERY_STRING = 'Loyalty Airdrop Support Enquiry';
 export const TOTAL_AIRDROP_TOKENS_STRING = 'Total Airdrop Tokens';
 export const TOTAL_AIRDROPS_STRING = 'Airdrops';
 export const SUCCESSFUL_REGISTRATION_STRING =
   'Cardano Wallet connected Successfully, You are now registered for Loyalty rewards';
 export const SUCCESSFUL_CLAIM_STRING = 'Successfully Claimed Initiated for Window';
-export const AIRDROP_ELIGIBILITY_STRING = 'Airdrop Status';
+export const AIRDROP_ELIGIBILITY_STRING = 'Loyalty rewards Status';
 export const AIRDROP_NOT_QUALIFIED_STRING = 'Not Qualified';
 export const AIRDROP_WINDOW_INELIGIBILITY_STRING = 'Sorry, You are not qualified for airdrop window ';
 export const AIRDROP_CHECK_RULES_SCHEDULE = 'Please check the rules and schedule for the next window.';
-export const AIRDROP_HOW_IT_WORKS_STRING = 'How Loyality Rewards Works';
-export const AIRDROP_TITLE_STRING = 'Loyality Rewards Info:';
+export const AIRDROP_HOW_IT_WORK_STRING = 'How Loyalty Rewards work';
+export const AIRDROP_TITLE_STRING = 'Loyalty Rewards';
 export const AIRDROP_DESCRIPTION_STRING =
   'During the first year of Phase Two, this 5% of the monthly tranches will be allotted to Phase One AGI (ERC-20) token holders as a reward for loyalty and to incentivize participation in the Phase II network. The specifics of this distribution are currently being worked out together with legal counsel as there are subtleties regarding “airdrops” and similar mechanisms in various jurisdictions. The utilization of the Loyalty Reward token pool after the first year may be changed via democratic vote of token-holders.';
 export const AIRDROP_CLAIM_IN_PROGRESS_STRING = 'Your Claim is in progress';
@@ -69,10 +69,6 @@ export const AIRDROP_LINKS = {
 
 export const AIRDROP_RULES = [
   {
-    title: 'AGIX Balance',
-    description: 'TBD',
-  },
-  {
     title: 'Registration Requirements',
     description:
       'None. If your address has received AGIX during the hardfork, it will be eligible to claim loyalty rewards. Users can claim each allocation once it becomes available, or claim all released allocations in one transaction.',
@@ -91,22 +87,26 @@ export const AIRDROP_RULES = [
     description:
       'Due to the way that transferring a native asset on the Cardano network works, users will need to deposit about 2 ADA from the wallet they are claiming the rewards to (in order to cover for sending the AGIX tokens). Users will receive these back together with the AGIX Loyalty Reward Tokens.',
   },
+  {
+    title: 'AGI Balance',
+    description: 'minimum of 10 AGI',
+  },
 ];
 
 export const HOW_IT_WORKS = [
   {
     title: 'Eligibility',
     description:
-      'Snapshot: May 28th, 2021, at 08:00:20 AM UTC+0 (Hardfork snapshot of AGI holders). Eligibility restricted to Private wallets only - Token balances which were held on Binance/Kucoin or other centralized exchanges or smart contracts during the hardfork are not eligible. Minimum AGI required for eligibility: 10 AGI.',
+      'Addresses included in the snapshot are automatically eligible. Snapshot: May 28th, 2021, at 08:00:20 AM UTC+0 (Hardfork snapshot of AGI holders). Private wallets and staking only, exchange balances are not eligible. Minimum AGI required: 10.',
   },
   {
     title: 'Allocation',
-    description: 'Rewards are proportional to token balance during the snapshot, +20% bonus for stakers. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards.',
+    description: 'Rewards are proportional to token balance during the snapshot. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards.',
   },
   {
     title: 'Total Year 1 tokens to Distribute',
     description:
-      '8,293,401 AGIX, in 6 equal batches.',
+      'The Loyalty Rewards pool for year 1 totals 8,239,401 AGIX tokens, distributed in six equal batches.',
   },
   {
     title: 'Distribution periods',
@@ -140,9 +140,9 @@ export const windowStatusActionMap = {
 export const windowStatusLabelMap = {
   [WindowStatus.UPCOMING]: 'Airdrop Registration Window',
   [WindowStatus.REGISTRATION]: 'Airdrop Registration Window',
-  [WindowStatus.IDLE]: 'Airdrop Claim Window',
-  [WindowStatus.CLAIM]: 'Airdrop Claim Window',
-  [WindowStatus.LAST_CLAIM]: 'Airdrop Claim Window',
+  [WindowStatus.IDLE]: 'Loyalty Rewards Claim Window',
+  [WindowStatus.CLAIM]: 'Loyalty Rewards Claim Window',
+  [WindowStatus.LAST_CLAIM]: 'Loyalty Rewards Claim Window',
 };
 
 export const LOADER_MESSAGE = {

@@ -155,18 +155,36 @@ export default function AccountModal({ open, onClose }: AccountModalProps) {
                   <span variant="body1">Wallet:</span>
                   <span>{cardanoWalletName}</span>
                 </Box>
+                <Box>
+                  <span variant="body1">Type</span>
+                  <span>Cardano</span>
+                </Box>
+                <Box>
+                  <span>Network:</span>
+                  <span>{chainId === 1 ? 'Mainnet Network' : 'Ropsten Test Network'}</span>
+                </Box>
                 <Typography className={classes.accountNo}>
                   <AccountBalanceWalletIcon />
                   {cardanoWalletAddress}
                 </Typography>
-                <Button
-                  variant="text"
-                  onClick={() => onCopyAddress(true)}
-                  startIcon={<CopyIcon />}
-                  className={classes.copyBtn}
-                >
-                  {copyCardano}
-                </Button>
+                <Box className={classes.ethAccBtnContainer}>
+                  <Button
+                    variant="text"
+                    onClick={() => onCopyAddress(false)}
+                    startIcon={<CopyIcon />}
+                    className={classes.copyBtn}
+                  >
+                    {copyCardano}
+                  </Button>
+                  <Button
+                    onClick={disconnectWallet}
+                    variant="text"
+                    startIcon={<LogoutIcon />}
+                    className={classes.disconnectBtn}
+                  >
+                    Disconnect
+                  </Button>
+                </Box>
               </Grid>
             )}
           </Grid>

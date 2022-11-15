@@ -50,8 +50,10 @@ export const AIRDROP_WINDOW_INELIGIBILITY_STRING = 'Sorry, You are not qualified
 export const AIRDROP_CHECK_RULES_SCHEDULE = 'Please check the rules and schedule for the next window.';
 export const AIRDROP_HOW_IT_WORK_STRING = 'How Loyalty Rewards work';
 export const AIRDROP_TITLE_STRING = 'Loyalty Rewards';
-export const AIRDROP_DESCRIPTION_STRING =
-  'During the first year of Phase Two, this 5% of the monthly tranches will be allotted to Phase One AGI (ERC-20) token holders as a reward for loyalty and to incentivize participation in the Phase II network. The specifics of this distribution are currently being worked out together with legal counsel as there are subtleties regarding “airdrops” and similar mechanisms in various jurisdictions. The utilization of the Loyalty Reward token pool after the first year may be changed via democratic vote of token-holders.';
+export const AIRDROP_DESCRIPTION_STRING1 =
+  'In the SingularityNET Phase Two proposal, 5% of tokens minted each month are allocated to creating a special “Loyalty Rewards Pool”. These tokens are allocated to express the gratitude of SingularityNET to Phase One AGI token holders for supporting the Phase Two initiative, and to create an opportunity to incentivize and reward community growth through new token holders on the Cardano blockchain.';
+export const AIRDROP_DESCRIPTION_STRING2 =
+  'The Phase Two plan made a clear distinction between the distribution of tokens from the first 12 months of AGIX-ADA minting, and those minted from year 2 onwards. Distribution of tokens minted during the first 12-month cycle is to be initiated via mechanics determined by the SingularityNET organization, while the community has the opportunity to update the distribution mechanics thereafter.';
 export const AIRDROP_CLAIM_IN_PROGRESS_STRING = 'Your Claim is in progress';
 
 export const AIRDROP_LINKS = {
@@ -71,11 +73,11 @@ export const AIRDROP_RULES = [
   {
     title: 'Registration Requirements',
     description:
-      'None. If your address has received AGIX during the hardfork, it will be eligible to claim loyalty rewards. Users can claim each allocation once it becomes available, or claim all released allocations in one transaction.',
+      'You do not have to register to become eligible, users are only required to claim. If your address has received AGIX during the hardfork on May 28th 2021, it will be eligible to claim loyalty rewards. Users can claim each allocation once it becomes available, or claim all released allocations in one transaction.',
   },
   {
     title: 'KYC requirements',
-    description: 'None',
+    description: 'There are no KYC requirements to participate in the loyalty rewards program.',
   },
   {
     title: 'Claiming End Date',
@@ -101,17 +103,16 @@ export const HOW_IT_WORKS = [
   },
   {
     title: 'Allocation',
-    description: 'Rewards are proportional to token balance during the snapshot. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards.',
+    description:
+      'Rewards are proportional to token balance during the snapshot. Staking Bonus: AGI Tokens which were staked on staking.singularitynet.io at the time of the snapshot will qualify for a 20% bonus on top of the allocated loyalty rewards.',
   },
   {
     title: 'Total Year 1 tokens to Distribute',
-    description:
-      'The Loyalty Rewards pool for year 1 totals 8,239,401 AGIX tokens, distributed in six equal batches.',
+    description: 'The Loyalty Rewards pool for year 1 totals 8,239,401 AGIX tokens, distributed in six equal batches.',
   },
   {
     title: 'Distribution periods',
-    description:
-      'There will be six monthly allocations, starting November 22nd, 2022 and running to March 21st, 2023.',
+    description: 'There will be six monthly allocations, starting November 22nd, 2022 and running to March 21st, 2023.',
   },
 ];
 

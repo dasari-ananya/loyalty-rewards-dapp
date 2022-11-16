@@ -55,8 +55,6 @@ export default function WalletModal({ open, setOpen }: Props) {
   useEagerConnect();
   const dispatch = useAppDispatch();
 
-  console.log('@connecter', connector)
-
   const handleConnect = async (connector: AbstractConnector | undefined) => {
     let name = '';
     Object.keys(SUPPORTED_WALLETS).map((key) => {

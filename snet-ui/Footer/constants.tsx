@@ -33,7 +33,6 @@ const PrimaryFooterMainLinks = [
       { label: 'Discord', link: 'https://discord.com/invite/snet', internalLink: false },
       { label: 'Forum', link: 'https://community.singularitynet.io/', internalLink: false },
       { label: 'Official Blog', link: 'https://medium.com/nunet/nunet-ntx-token-airdrop-for-agix-token-holders-c13a89b154b7', internalLink: false },
-      { label: 'Governance', link: '#', internalLink: false },
       { label: 'Devloper Portal', link: 'https://dev.singularitynet.io/', internalLink: false },
     ],
   },

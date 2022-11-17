@@ -71,8 +71,6 @@ export default function AccountModal({ open, onClose, ethWalletName }: AccountMo
     }
   }, [isEligible]);
 
-  console.log('CLICKED', ethWalletName);
-
   return (
     <Box>
       <Dialog open={open} onClose={onClose} className={classes.accountModalDialog}>

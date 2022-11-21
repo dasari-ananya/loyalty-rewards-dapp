@@ -14,7 +14,7 @@ export const faqSampleData: FAQ[] = [
       'Yes, you have up to three years to claim the allocations of year 1 of the loyalty rewards pool, up until November 22nd 2025, 11:00 AM UTC+0.',
   },
   {
-    question: 'How do I Connect to my Ethernl Wallet?',
+    question: 'How do I connect to my Ethernl Wallet?',
     answer: `
     <ul>
     <li>Install the Eternl wallet, add to extension.</li>

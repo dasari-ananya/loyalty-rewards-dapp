@@ -112,7 +112,7 @@ export const HOW_IT_WORKS = [
   },
   {
     title: 'Distribution periods',
-    description: 'There will be six monthly allocations, starting November 22nd, 2022 and the last one becoming available at March 21st, 2023.',
+    description: 'There will be six monthly allocations, starting November 22nd, 2022 and the last one becoming available at April 18th, 2023.',
   },
 ];
 

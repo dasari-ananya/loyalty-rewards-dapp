@@ -152,7 +152,7 @@ export default function AccountModal({ open, onClose, ethWalletName }: AccountMo
                     </ListItem>
                   ))}
                 </List>
-                <Typography>Please note once wallet is maped you cannot change it.</Typography>
+                <Typography>Please note once wallet is mapped you cannot change it.</Typography>
               </Grid>
             ) : (
               <Grid md={7} className={classes.connectedWalletDetails}>

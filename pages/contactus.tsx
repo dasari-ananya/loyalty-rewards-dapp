@@ -64,7 +64,8 @@ export default function ContactUs() {
         attachment_details: {},
       };
 
-      await axios.post(API_PATHS.CONTACT_US, payload);
+      const URL: string = process.env.NEXT_PUBLIC_CONTACT_US_API_ENDPOINT || '';
+      await axios.post(URL, payload);
       setAlertMessage({
         severity: alertTypes.SUCCESS,
         value: 'Your Feedback has been submitted successfully',

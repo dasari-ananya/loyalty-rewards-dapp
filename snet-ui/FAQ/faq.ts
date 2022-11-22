@@ -4,7 +4,7 @@ type FAQ = {
 };
 export const faqSampleData: FAQ[] = [
   {
-    question: 'How is elegibility checked?',
+    question: 'How is eligibility checked?',
     answer:
       'We check the snapshot used by the hardfork of AGI tokens. This was taken on May 28th, 2021, at 08:00:20 AM UTC+0. The Phase Two plan defines the first year of allocations to be reserved for Phase One holders. ',
   },
@@ -22,15 +22,11 @@ export const faqSampleData: FAQ[] = [
     <li>Click on the Add Wallet on top left, select the 'Create wallet'.</li>
     <li>Add Wallet Name and Password, click on Save.</li>
     <li>You can add number of accounts here, but for now lets keep it 1. save the changes</li>
-    <li>Read the warning! Then click to confirm you understand it and the consequences of losing your recovery seed. Only do so if you agree to this.</li>
-    <li>Now you see the 24 words here, copy them some where safe and then click on the checkbox  and then the continue button.</li>
-    <li>Now write down thoese 24 words shown in the previous screen.</li>
-    <li>Your wallet is now created.</li>
     <li>Now click on the 'DAppBrowser (beta)' on the bottom left, select the 'Connect Account' on the right side.</li>
     <li>Select DApp Wallet and click on 'Connect As DApp Account'.</li>
     <li>Now go to loyalty dapp, connect your cardano wallet with Eternal.</li>
     <li>You will see the loyalty dapp url now click on 'Connet to Site'.</li>
-    <ul/>`
+    <ul/>`,
   },
   {
     question: 'Why do I need to connect both an Ethereum and a Cardano Wallet?',
@@ -46,5 +42,11 @@ export const faqSampleData: FAQ[] = [
     question: 'I don’t like any of this, what can I do?',
     answer:
       'In January 2023 a governance round will take place on how to allocate the loyalty rewards pool for year 2 and onwards. Do let your voice be heard and participate!',
+  },
+  {
+    question:
+      'Failed Uncaught: UTxO Balance Insufficient',
+    answer:
+      'Please check if you have sufficient ADA, please note this ADA will be returned back when the AGIX tokens are sent over to the registered cardano Wallet',
   },
 ];

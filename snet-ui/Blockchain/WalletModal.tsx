@@ -137,10 +137,10 @@ export default function WalletModal({ open, setOpen }: Props) {
               </Grid>
             </Grid>
 
-            <Typography className={classes.readDocText}>
+            {/* <Typography className={classes.readDocText}>
               Need help connecting a wallet?
               <button onClick={handleReadDoc}> Read our documentation</button>
-            </Typography>
+            </Typography> */}
           </Box>
 
           <Box className={classes.connectWalletFooter}>

@@ -52,14 +52,18 @@ export default function ContactUs() {
 
   const sendEmail = async () => {
     try {
-      const query = `Message : ${message} . From ${email} Wallet Address : ${walletAddress}`;
-      const EMAIL_HOST = process.env.NEXT_PUBLIC_CONTACT_US_MAILER;
       const payload = {
-        recipient: EMAIL_HOST,
-        message: query,
-        subject: { AIRDROP_SUPPORT_QUERY_STRING },
-        notification_type: 'support',
+        source: 'LOYALTY_AIRDROP',
+        name: username,
+        address: walletAddress,
+        email,
+        phone_no: '',
+        message_type: category,
+        subject: AIRDROP_SUPPORT_QUERY_STRING,
+        message,
+        attachment_details: {},
       };
+
       await axios.post(API_PATHS.CONTACT_US, payload);
       setAlertMessage({
         severity: alertTypes.SUCCESS,
@@ -165,8 +169,7 @@ export default function ContactUs() {
             onChange={handleMessageChange}
             helperText={messageError}
           />
-          {alertMessage.value.trim() ?
-            <Alert severity={alertMessage.severity}>{alertMessage.value}</Alert> : null}
+          {alertMessage.value.trim() ? <Alert severity={alertMessage.severity}>{alertMessage.value}</Alert> : null}
           <Box display="flex" justifyContent="center" sx={{ my: 2 }}>
             <LoadingButton
               variant="contained"
